@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/mjgil-javascript/declassify/issues"
   },
-  "homepage": "https://github.com/mjgil-javascript/declassify#readme"
+  "homepage": "https://github.com/mjgil-javascript/declassify#readme",
+  "dependencies": {
+    "acorn": "0.11.0",
+    "chai": "^3.5.0",
+    "es6-transpiler": "0.7.18",
+    "estraverse": "1.9.3",
+    "magic-string": "0.10.2",
+    "mocha": "^3.1.0",
+    "rollup": "0.24.0"
+  }
 }
