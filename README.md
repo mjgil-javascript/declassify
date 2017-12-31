@@ -17,4 +17,6 @@ add examples directory
 add test directory
 replace immutablelinkedmap code
 add to linkedmap code
+add travis file for testing
+add more to readme to explain usage and why needed
 ```
