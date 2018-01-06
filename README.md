@@ -1,5 +1,5 @@
 # declassify
-better es6 classes (extending classes without the need for "super()")
+better es6 subclasses (extending classes without the need for "super()")
 
 
 
