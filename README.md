@@ -1,7 +1,14 @@
 # declassify
 better es6 classes (extending classes without the need for "super()")
 
+
+
 ### Fixes these issues:
+```
+npm run error1
+npm run error2
+```
+
 ```
 repl: missing super() call in constructor
   11 | 

@@ -3,5 +3,7 @@ export class MyObject {
 }
 
 export class MyArray extends MyObject {
-  constructor() {}
+  constructor() {
+    this.test = 1
+  }
 }
