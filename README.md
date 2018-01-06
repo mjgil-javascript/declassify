@@ -1,6 +1,38 @@
 # declassify
-better es6 classes
+better es6 classes (extending classes without the need for "super()")
 
+Fixes these issues:
+```
+repl: missing super() call in constructor
+  11 | 
+  12 | export class List extends Vector {
+> 13 |   constructor(test) {
+     |   ^
+  14 |     return {};
+  15 |   }
+  16 | 
+```
+
+```
+repl: 'this' is not allowed before super()
+  12 | export class List extends Vector {
+  13 |   constructor(test) {
+> 14 |     this.test = test;
+     |     ^
+  15 |     return {};
+  16 |   }
+  17 | 
+```
+
+```
+/index.js:12
+  constructor(test) {}
+             ^
+
+ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+```
+
+see tests
 
 #### Todo
 
