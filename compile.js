@@ -8,11 +8,20 @@ var rollup = require('rollup')
 //   copyright file, years, name
 //   output file
 
-var fileName = './src/index.js'
+if (process.argv.length !== 6) {
+  console.error('requires 4 arguements')
+  console.error('inputFileName,outputFileName,copyrightFileName,moduleName')
+  process.exit(1)
+}
 
+// first two [nodeLocation, scriptLocation]
+var inputFileName = process.argv[2]
+var outputFileName = process.argv[3]
+var copyrightFileName = process.argv[4]
+var moduleName = process.argv[5]
 
 rollup.rollup({
-  entry: fileName,
+  entry: inputFileName,
   plugins: [
       {
         transform: function(source) {
@@ -23,17 +32,15 @@ rollup.rollup({
   })
   .catch(function(e) {console.log(e)})
   .then(function (bundle) {
-    var copyright = fs.readFileSync('./COPYRIGHT');
+    var copyright = fs.readFileSync(copyrightFileName);
 
     var bundled = bundle.generate({
       format: 'umd',
       banner: copyright,
-      moduleName: 'IndexedDoublyLinkedList'
+      moduleName: moduleName
     }).code;
 
-    var es6 = require('es6-transpiler');
-
-    var transformResult = require("es6-transpiler").run({
+    var transformResult = es6.run({
       src: bundled,
       disallowUnknownReferences: false,
       environments: ["node", "browser"],
@@ -47,29 +54,6 @@ rollup.rollup({
     }
 
     var transformed = transformResult.src;
-    fs.writeFileSync('./build/index.js', transformed);
+    fs.writeFileSync(outputFileName, transformed);
 
-  //   var minifyResult = uglify.minify(transformed, {
-  //     fromString: true,
-  //     mangle: {
-  //       toplevel: true
-  //     },
-  //     compress: {
-  //       comparisons: true,
-  //       pure_getters: true,
-  //       unsafe: true
-  //     },
-  //     output: {
-  //       max_line_len: 2048,
-  //     },
-  //     reserved: ['module', 'define', 'Immutable']
-  //   });
-
-  //   var minified = minifyResult.code;
-
-  //   fs.writeFileSync(file.dest + '.min.js', copyright + minified);
-  // }).then(function(){ done(); }, function(error) {
-  //   grunt.log.error(error.stack);
-  //   done(false);
-  // });
 }).catch(function(e) {console.log(e)});

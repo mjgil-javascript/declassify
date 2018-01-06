@@ -120,7 +120,12 @@ function declassify(source) {
   });
 
   if (needsCreateClass) {
-    body.prepend('import createClass from "../resources/createClass"\n');
+    body.prepend(`function createClass(ctor, superClass) {
+  if (superClass) {
+    ctor.prototype = Object.create(superClass.prototype);
+  }
+  ctor.prototype.constructor = ctor;
+}\n`);
   }
 
   return body.toString();
