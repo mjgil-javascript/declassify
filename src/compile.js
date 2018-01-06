@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require('fs')
 var es6 = require('es6-transpiler');
 var declassify = require('./declassify')
