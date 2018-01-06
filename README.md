@@ -1,7 +1,7 @@
 # declassify
 better es6 classes (extending classes without the need for "super()")
 
-Fixes these issues:
+### Fixes these issues:
 ```
 repl: missing super() call in constructor
   11 | 
@@ -32,9 +32,7 @@ repl: 'this' is not allowed before super()
 ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
 ```
 
-see tests
-
-#### Todo
+### Todo
 
 ```
 make into command line interface
