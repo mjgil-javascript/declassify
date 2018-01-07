@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "error1": "babel-node examples/error1.js",
-    "error2": "babel-node examples/error2.js"
+    "error2": "babel-node examples/error2.js",
+    "error3": "babel-node examples/error3.js"
   },
   "repository": {
     "type": "git",

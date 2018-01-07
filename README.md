@@ -20,6 +20,7 @@ file:package.json
 ```
 npm run error1
 npm run error2
+npm run error3
 ```
 
 ```
@@ -45,12 +46,25 @@ repl: 'this' is not allowed before super()
 ```
 
 ```
+TypeError: Cannot call a class as a function 
+
+or
+
+TypeError: Class constructor LinkedMap cannot be invoked without 'new'
+```
+
+```
+(repeat of 1 & 2)
+
 /index.js:12
   constructor(test) {}
              ^
 
 ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
 ```
+
+```
+
 
 ### Todo
 

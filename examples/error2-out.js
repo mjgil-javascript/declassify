@@ -23,6 +23,14 @@
       this.test = 1
     }
 
+    MyArray.test = function() {
+      return 'three'
+    };
+
+    MyArray.prototype.one = function() {
+      return 'hi'
+    };
+
   exports.MyObject = MyObject;
   exports.MyArray = MyArray;
 
