@@ -63,8 +63,6 @@ TypeError: Class constructor LinkedMap cannot be invoked without 'new'
 ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
 ```
 
-```
-
 
 ### Todo
 
