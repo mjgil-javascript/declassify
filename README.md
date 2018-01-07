@@ -2,6 +2,19 @@
 better es6 subclasses (extending classes without the need for "super()")
 
 
+### Current Usage:
+```
+./src/compile.js inputFileName outputFileName copyrightFileName moduleName
+```
+```
+package.json
+"scripts": {
+    "build": "declassify src/index.js build/index.js COPYRIGHT ImmutableLinkedMap",
+  },
+  "devDependencies": {
+    "declassify": "git+https://git@github.com/mjgil-javascript/declassify.git#4194c66",
+  },
+```
 
 ### Fixes these issues:
 ```
