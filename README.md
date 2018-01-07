@@ -9,11 +9,11 @@ better es6 classes (extending classes without the need for "super()" and treatin
 ```
 file:package.json
 "scripts": {
-    "build": "declassify src/index.js build/index.js COPYRIGHT ImmutableLinkedMap",
-  },
-  "devDependencies": {
-    "declassify": "git+https://git@github.com/mjgil-javascript/declassify.git#4194c66",
-  },
+  "build": "declassify src/index.js build/index.js COPYRIGHT ImmutableLinkedMap",
+},
+"devDependencies": {
+  "declassify": "git+https://git@github.com/mjgil-javascript/declassify.git#4194c66",
+},
 ```
 
 ### Fixes these issues:
