@@ -1,5 +1,5 @@
 # declassify
-better es6 classes (extending classes without the need for "super()" and treating classes like functions)
+better es6 classes (extending classes without the need for "super()" and treating classes like functions -- no need to call "new" for each instance)
 
 
 ### Current Usage:
